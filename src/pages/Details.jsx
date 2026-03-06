@@ -24,7 +24,7 @@ export default function Details({ city, unit = "C" }) {
         setError("");
         
         const res = await fetch(
-          `https://weather-backend-15c4.onrender.com/api/weather?city=${encodeURIComponent(city)}&unit=${unit}`
+          `${import.meta.env.VITE_API_URL}/api/weather?city=${encodeURIComponent(city)}&unit=${unit}`
         );
         
         if (!res.ok) throw new Error("Details fetch failed");

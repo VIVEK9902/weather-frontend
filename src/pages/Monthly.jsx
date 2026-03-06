@@ -77,7 +77,7 @@ export default function Monthly({ city = "New Delhi", unit = "C" }) {
         setError("");
 
         const res = await fetch(
-          `https://weather-backend-15c4.onrender.com/api/weather/forecast?city=${encodeURIComponent(city)}&units=${unit === 'C' ? 'metric' : 'imperial'}`
+          `${import.meta.env.VITE_API_URL}/api/weather/forecast?city=${encodeURIComponent(city)}&units=${unit === 'C' ? 'metric' : 'imperial'}`
         );
 
         if (!res.ok) throw new Error("Monthly forecast fetch failed");

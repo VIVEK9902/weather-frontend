@@ -155,7 +155,7 @@ const getBackgroundGradient = () => {
     try {
       setLoading(true);
       setError("");
-      const res = await fetch(`https://weather-backend-15c4.onrender.com/api/weather?city=${cityOrCoords}&unit=${unit}`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/weather?city=${cityOrCoords}&unit=${unit}`);
       if (!res.ok) {
         throw new Error(res.status === 404 ? "City not found. Try again." : "Weather service unavailable.");
       }
