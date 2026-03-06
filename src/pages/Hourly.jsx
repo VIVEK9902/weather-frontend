@@ -26,7 +26,7 @@ export default function Hourly({ city = "New Delhi", unit = "C" }) {
         setError("");
         
         const res = await fetch(
-          `http://localhost:9090/api/weather/forecast?city=${encodeURIComponent(city)}&units=${unit === 'C' ? 'metric' : 'imperial'}`
+          `https://weather-backend-15c4.onrender.com/api/weather/forecast?city=${encodeURIComponent(city)}&units=${unit === 'C' ? 'metric' : 'imperial'}`
         );
         
         if (!res.ok) throw new Error("Hourly forecast fetch failed");

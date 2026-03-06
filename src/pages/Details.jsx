@@ -24,7 +24,7 @@ export default function Details({ city, unit = "C" }) {
         setError("");
         
         const res = await fetch(
-          `http://localhost:9090/api/weather?city=${encodeURIComponent(city)}&unit=${unit}`
+          `https://weather-backend-15c4.onrender.com/api/weather?city=${encodeURIComponent(city)}&unit=${unit}`
         );
         
         if (!res.ok) throw new Error("Details fetch failed");

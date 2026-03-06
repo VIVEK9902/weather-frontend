@@ -41,7 +41,7 @@ export default function Map({ city, onLocationSelect }) {
     setLoading(true);
     setError(null);
 
-    fetch(`http://localhost:9090/api/weather?city=${encodeURIComponent(city)}`)
+    fetch(`https://weather-backend-15c4.onrender.com/api/weather?city=${encodeURIComponent(city)}`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch weather data');
         return res.json();
