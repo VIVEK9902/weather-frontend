@@ -1,17 +1,35 @@
-# React + Vite
+# Weather Dashboard 🌦️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack weather analytics application built using **React (Vite)** and **Spring Boot**.
 
-Currently, two official plugins are available:
+## Live Demo
+Frontend: https://weather-frontend-liard.vercel.app/  
+Backend API: https://weather-backend-15c4.onrender.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Real-time weather data
+- City search with suggestions
+- 3-day forecast
+- Hourly forecast charts
+- Weather highlights (humidity, UV, wind)
+- Dark / Light mode
+- Geolocation weather detection
+- Responsive UI
 
-## React Compiler
+## Tech Stack
+Frontend: React + Vite + TailwindCSS  
+Backend: Spring Boot  
+Deployment: Vercel + Render  
+Containerization: Docker
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Architecture
 
-## Expanding the ESLint configuration
+User → Vercel (React Frontend) → Render (Spring Boot Backend) → Weather API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# weather-app" 
+## Installation
+
+Clone the repo: git clone https://github.com/VIVEK9902/weather-frontend.git
+
+Install dependencies: npm install
+
+Run locally: npm run dev
